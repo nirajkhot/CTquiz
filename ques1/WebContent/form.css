@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+
+body, form, ul, li, p, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+#signup p {
+	margin: 0 0 1em 0;
+}
+
+#signup h2 {
+	font-size: 14px;
+	margin: 0 0 12px;
+}
+
+#signup {
+	margin: 20px auto;
+	width: 500px;
+}
+
+#signup fieldset {
+	margin: 0 0 20px;
+	padding: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#signup ol {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#signup li {
+	margin: 0 0 12px;
+	position: relative;
+}
+
+#signup label {
+	width: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#signup fieldset input, #signup fieldset select {
+	display: inline-block;
+	width: 250px;
+	border: 1px solid;
+	padding: 3px 26px 3px 3px;
+}
+
