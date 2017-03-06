@@ -10,7 +10,7 @@ public class MaxNumOfWords {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter String");
+		System.out.println("Enter text:");
 		String str = sc.nextLine();
 
 		MaxNumOfWords obj = new MaxNumOfWords();
@@ -35,7 +35,7 @@ public class MaxNumOfWords {
 						.next()) {
 
 			String sentence = source.substring(startSentence, endSentence);
-			System.out.println(sentence);
+//			System.out.println(sentence);
 
 			// Separating words
 			String[] words = sentence.split(" ");
@@ -46,7 +46,7 @@ public class MaxNumOfWords {
 		}
 
 		// Finding maximum number of words in all sentences
-		System.out.println(Collections.max(numOfWords));
+		System.out.println("Maximum num of words in all given sentences: "+Collections.max(numOfWords));
 
 	}
 
