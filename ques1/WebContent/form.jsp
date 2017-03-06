@@ -9,6 +9,19 @@
 <script type="text/javascript">
 	
 </script>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
 </head>
 <body>
 	<form id="signup" action="Servlet1" method="post">
@@ -66,16 +79,17 @@
 			ResultSet rs = pst.executeQuery();
 			ResultSetMetaData rsmd = rs.getMetaData();
 
-			out.println("<table style='border:1'><tr><th>" + rsmd.getColumnName(1) + "</th><th>" + rsmd.getColumnName(2)
-					+ "</th><th>" + rsmd.getColumnName(3) + "</th><th>" + rsmd.getColumnName(4)+"</th><th>"
-					+ rsmd.getColumnName(5)+"</th><th>" + rsmd.getColumnName(6)+"</th><th>" + rsmd.getColumnName(7)+"</th></tr>");
+			out.println("<table><tr bgcolor='#4CAF50'><th>" + rsmd.getColumnName(1) + "</th><th>" + rsmd.getColumnName(2)
+					+ "</th><th>" /* + rsmd.getColumnName(3) + "</th><th>" + rsmd.getColumnName(4)+"</th><th>"
+					 */+ rsmd.getColumnName(5)+"</th><th>" + rsmd.getColumnName(6)+"</th><th>" + rsmd.getColumnName(7)+"</th><th></th><th></th></tr>");
 			while (rs.next()) {
-				out.println(" <tr><td>" + rs.getString(1) + "<td></td>" + rs.getString(2) + "<td></td>"
-						+ rs.getString(3) + "<td></td>" + rs.getString(4) + "<td></td>" + rs.getString(5)
-						+ "<td></td>" + rs.getString(6) + "<td></td>" + rs.getString(7)
-						+ "<td></td> <a href='edit.jsp?uname=${" + rs.getString(1) + "}'>Edit</a> "
-						+ " <a href='delete.jsp'>Delete</a> " + "</tr></table><br>");
+				out.println(" <tr><td>" + rs.getString(1) + "</td><td>" + rs.getString(2) + "</td><td>"
+						/* + rs.getString(3) + "</td><td>" + rs.getString(4) + "</td><td>" */ + rs.getString(5)
+						+ "</td><td>" + rs.getString(6) + "</td><td>" + rs.getString(7)
+						+ "</td><td> <a href='edit.jsp?uname=" + rs.getString(1) + "'>Edit</a> "
+						+ "</td><td> <a href='delete.jsp'>Delete</a> " + "</tr><br>");
 			}
+			out.println("</table>");
 
 			rs.close();
 			pst.close();

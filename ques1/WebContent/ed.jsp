@@ -19,12 +19,11 @@
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/info", "root", "root");
 			PreparedStatement pst = con
-					.prepareStatement("update user_info set username=?, password=?, cpassword=?,fname=?,"
-							+ "lname=?,email=?,tel=?,loc=? where username="+ name);
+					.prepareStatement("update user_info set F_Name=?, L_Name=?,U_Name=?,Password=?,Email=?,Mobile=?,Location=? where U_Name="+ name);
 			pst.setString(1, request.getParameter("firstname"));
 			pst.setString(2, request.getParameter("lastname"));
 			pst.setString(3, request.getParameter("username"));
-			pst.setString(4, request.getParameter("cpassword"));
+			pst.setString(4, request.getParameter("password"));
 			pst.setString(5, request.getParameter("email"));
 			pst.setInt(6, m);
 			pst.setString(7, request.getParameter("loc"));
