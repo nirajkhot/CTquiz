@@ -104,3 +104,16 @@ Query OK, 1 row affected (0.05 sec)
 ```mysql
 select m.Dname as Department,count(*) as NumberOfEmployee from Employee t,Department m where t.DeptNo = m.DeptNo group by t.DeptNo,m.Dname;
 ```
+
+```
++------------------+------------------+
+| Department       | NumberOfEmployee |
++------------------+------------------+
+| Application Devp |                3 |
+| Workstation Devp |                3 |
++------------------+------------------+
+2 rows in set (0.00 sec)
+
+```
+
+
